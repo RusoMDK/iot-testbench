@@ -1,0 +1,43 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { BaseRoutingModule } from '../../routing/base-routing.module';
+import { FooterComponent } from './footer/footer.component';
+import { BaseComponent } from './base.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { HeaderComponent } from './header/header.component';
+import { MenuLeftComponent } from './menu-left/menu-left.component';
+import { IndexViewComponent } from 'src/app/layouts/index-view/index-view.component';
+import { LoginComponent } from 'src/app/Auth/login/login.component';
+import { RegisterComponent } from '../../Auth/register/register.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+
+@NgModule({
+  declarations: [
+    BaseComponent,
+    WelcomeComponent,
+    FooterComponent,
+    HeaderComponent,
+    MenuLeftComponent,
+    IndexViewComponent,
+    LoginComponent,
+    RegisterComponent,
+  ],
+  imports: [
+    CommonModule, 
+    BaseRoutingModule, 
+    SharedModule
+  ],
+  
+  providers: [],
+  exports: [
+    BaseComponent,
+    FooterComponent,
+    HeaderComponent,
+    MenuLeftComponent,
+    IndexViewComponent,
+    LoginComponent,
+    RegisterComponent, 
+  ],
+})
+export class BaseModule {}

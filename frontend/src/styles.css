@@ -1,0 +1,25 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.ant-tabs-top > .ant-tabs-nav::before,
+.ant-tabs-bottom > .ant-tabs-nav::before,
+.ant-tabs-top > div > .ant-tabs-nav::before,
+.ant-tabs-bottom > div > .ant-tabs-nav::before {
+  border-bottom: none !important;
+}
+
+.ant-tabs > .ant-tabs-nav,
+.ant-tabs > div > .ant-tabs-nav {
+  position: static !important;
+  display: block !important;
+  flex: initial !important;
+  align-items: initial !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+nz-sider {
+  background-color: #202020 !important;
+  margin: 0 0;
+}

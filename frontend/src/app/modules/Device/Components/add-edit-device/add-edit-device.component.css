@@ -1,0 +1,56 @@
+.modal-body {
+  padding: 2rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.required-asterisk {
+  color: red;
+}
+
+.nz-form-control {
+  position: relative;
+}
+
+.nz-form-control .ant-form-item-children-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  width: 100%;
+}
+
+input.error-input {
+  border-color: red;
+}
+
+button[nz-button][nzType="primary"] {
+  background-color: #a6ce39;
+  border-color: #a6ce39;
+}
+
+button[nz-button][nzType="primary"]:hover {
+  background-color: #8fbf33;
+  border-color: #8fbf33;
+}
+
+button[nz-button][nzType="primary"]:focus {
+  background-color: #8fbf33;
+  border-color: #8fbf33;
+}

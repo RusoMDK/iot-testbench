@@ -1,0 +1,31 @@
+<div class="modal-body">
+  <form nz-form [formGroup]="validateForm" [nzLayout]="'vertical'">
+    <!-- Nombre del modelo -->
+    <nz-form-item>
+      <nz-form-label [nzSpan]="24">Nombre del Modelo<span class="required-asterisk">*</span></nz-form-label>
+      <nz-form-control [nzSpan]="24" nzHasFeedback [nzValidateStatus]="validateForm.get('name')?.invalid && (validateForm.get('name')?.dirty || (validateForm.get('name')?.touched)) ? 'error' : ''">
+        <input nz-input formControlName="name" placeholder="Escriba el nombre"
+              [class.error-input]="validateForm.get('name')?.invalid && (validateForm.get('name')?.dirty || (validateForm.get('name')?.touched))" />
+        <ng-container *ngIf="validateForm.get('name')?.invalid && (validateForm.get('name')?.dirty || (validateForm.get('name')?.touched))">
+          <div class="error-message">
+            <div *ngIf="validateForm.get('name')?.errors?.['required']">Por favor introduzca el nombre!</div>
+            <div *ngIf="validateForm.get('name')?.errors?.['pattern']">El nombre solo puede contener letras, espacios y puntos.</div>
+            <div *ngIf="validateForm.get('name')?.errors?.['whitespace']">El nombre no puede estar vacío o contener solo espacios o puntos.</div>
+          </div>
+        </ng-container>
+      </nz-form-control>
+    </nz-form-item>
+
+    <!-- Id del usuario -->
+    <nz-form-item>
+      <nz-form-label [nzSpan]="24">Creado por</nz-form-label>
+      <nz-form-control [nzSpan]="24">
+        <input nz-input [value]="currentUser?.username" readonly />
+      </nz-form-control>
+    </nz-form-item>    
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" nz-button nzType="default" (click)="handleCancel()">Cancelar</button>
+  <button type="button" nz-button nzType="primary" (click)="submitForm()">Guardar</button>
+</div>
